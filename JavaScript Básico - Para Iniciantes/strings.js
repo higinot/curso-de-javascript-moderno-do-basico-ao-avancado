@@ -1,33 +1,42 @@
-let umaString = "Um Texto 1 13";
+let texto = "Um texto";
 
-//Concatenção
-console.log(umaString.concat(' Hello'));
-console.log(`${umaString} Hello`);
+//length retorna o tamanho da string
+console.log(texto.length);
 
-//IndexOf
-console.log(umaString.indexOf('o')); //começa de frente para trás
-console.log(umaString.lastIndexOf('U')); //começa de trás pra frente
+//typeOf retorna o tipo da variavel
+console.log(typeof texto);
 
-//match
-console.log(umaString.match(/[a-z]/g)); //flag 'g' faz a divisão
+//string[0] strings são arraz concatenados, com [0] podemos retonrar a posição 0
+console.log(texto[0]);
 
-//replace
-console.log(umaString.replace(/1/g, 'outra')); //muda 1/g (todos) por outra
+//Melhor forma para concatenar variavél e com template strings
+console.log(`Minha string é "${texto}"`);
 
-//length
-console.log(umaString.length); //Tamanho da string
+//indexOf retorna o index Do COMEÇO para o FIM
+console.log(texto.indexOf('U'));
 
-//slice
-console.log(umaString.slice(-3)); //- Do final até o começo
-console.log(umaString.slice(4)); //+ Do começo até o final
+//lastIndexOf retorna o index da letra do FIM para o COMEÇO
+console.log(texto.lastIndexOf('U'));
 
-//split
-console.log(umaString.split(' ')); //+ Divide a string em um array separando por ' '
+//search retorna o index onde foi encontrado
+console.log(texto.search('o'));
+
+//replace substitui uma posição da palavra
+console.log(texto.replace('t', "#"));
+
+//replace com flag g substitui todas as posições da palavra
+console.log(texto.replace(/t/g, "#"));
+
+//slice(COMEÇO DO CORTE, FINAL DO CORTE) utiliza para fatiar uma string
+console.log(texto.slice(3));
+
+//split(ONDE DIVIDIR) para dividir a string
+console.log(texto.split(' '));
 
 //toUpperCase()
-console.log(umaString.toUpperCase()); //+ Deixa o texto MAIUSCULO
+console.log(texto.toUpperCase()); //+ Deixa o texto MAIUSCULO
 
 //toLowerCase()
-console.log(umaString.toLowerCase()); //+ Deixa o texto minusculo
+console.log(texto.toLowerCase()); //+ Deixa o texto minusculo
 
 
